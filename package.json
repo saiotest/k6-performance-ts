@@ -1,0 +1,27 @@
+{
+	"name": "cascade-mobile-performance",
+	"version": "1.0.0",
+	"description": "performance testing with k6",
+	"main": "script.js",
+	"scripts": {
+		"test": "k6 run tests/perfo.js",
+		"bundle": "webpack"
+	},
+	"keywords": [
+		"k6"
+	],
+	"author": "dnv",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "7.23.0",
+		"@babel/preset-env": "7.22.20",
+		"@types/k6": "0.46.3",
+		"babel-loader": "9.1.3",
+		"core-js": "3.33.0",
+		"webpack": "5.88.2",
+		"webpack-cli": "5.1.4"
+	},
+	"dependencies": {
+		"node-fetch": "^3.3.2"
+	}
+}

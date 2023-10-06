@@ -1,0 +1,31 @@
+{
+	"workbench.settings.editor": "json",
+	"workbench.colorTheme": "Andromeda Colorizer",
+	"workbench.iconTheme": "vscode-icons",
+	"cSpell.language": "en,es",
+	"terminal.integrated.defaultProfile.windows": "Git Bash",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[Typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+	"editor.quickSuggestions": {
+		"comments": false,
+		"strings": true,
+		"other": true
+	},
+	"editor.formatOnType": true,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+	"editor.tabCompletion": "on",
+	"editor.lineHeight": 20,
+	"editor.cursorBlinking": "expand",
+	"cSpell.enableFiletypes": ["cucumber"],
+	"cSpell.autoFormatConfigFile": true,
+	"git.enableSmartCommit": true
+}
