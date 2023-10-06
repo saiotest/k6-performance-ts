@@ -3,7 +3,9 @@ const path = require('path');
 module.exports = {
 	mode: 'production',
 	entry: {
-		test: './tests/perfo.js',
+		test: './tests/performanceBundle.test.js',
+		urls: './helper/endpoints.js',
+		envs: './helper/environment.js',
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'), // eslint-disable-line

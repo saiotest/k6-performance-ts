@@ -4,8 +4,8 @@
 	"description": "performance testing with k6",
 	"main": "script.js",
 	"scripts": {
-		"test": "k6 run tests/perfo.js",
-		"bundle": "webpack"
+		"test": "k6 run tests/performance.test.js",
+		"perfo": "webpack && k6 run dist/test.bundle.js"
 	},
 	"keywords": [
 		"k6"
