@@ -25,7 +25,5 @@
 	"editor.tabCompletion": "on",
 	"editor.lineHeight": 20,
 	"editor.cursorBlinking": "expand",
-	"cSpell.enableFiletypes": ["cucumber"],
-	"cSpell.autoFormatConfigFile": true,
 	"git.enableSmartCommit": true
 }

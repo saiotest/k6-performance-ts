@@ -1,5 +1,4 @@
 import http from 'k6/http';
-import encoding from 'k6/encoding';
 import { check, sleep } from 'k6';
 
 export const user = {
@@ -47,9 +46,9 @@ export default function () {
 	const res = http.get(endpointCall, params);
 
 	check(res, {
-		'✅ status was 200': r => r.status == 200,
-		'✅ Json Response is defined': r => r.json().length !== 0,
+		'✅ Status was 200': r => r.status == 200,
+		'✅ Response has correct Data': r => r.json().length !== 0,
 	});
-	console.log(res.json());
+	console.log('✅ Response Body Defined:', res.json());
 	sleep(1);
 }
