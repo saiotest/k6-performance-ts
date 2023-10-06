@@ -1,8 +1,6 @@
 import http from 'k6/http';
 import encoding from 'k6/encoding';
 import { check, sleep } from 'k6';
-// at the top of your script:
-import { findBetween } from 'https://jslib.k6.io/k6-utils/1.2.0/index.js';
 
 export const user = {
 	username: 'automated_tester03@casegrp.onmicrosoft.com',
@@ -12,7 +10,6 @@ const baseUrl = 'https://casegrp.b2clogin.com/casegrp.onmicrosoft.com';
 const tokenEndpoint = '/B2C_1_ropc/oauth2/v2.0/token';
 const scope = 'openid+9b89d9ae-ee5f-41ac-add6-8042a042a203';
 const clientId = '9b89d9ae-ee5f-41ac-add6-8042a042a203';
-
 const requestURL = `${baseUrl}${tokenEndpoint}?username=${user.username}&password=${user.password}&grant_type=password&scope=${scope}&client_id=${clientId}&response_type=token`;
 const options = {
 	headers: { 'Content-Type': 'x-www-form-urlencoded' },
@@ -35,6 +32,7 @@ const server = 'https://cascade-mobile.eus2.nonprod.kubeit.dnv.com/cas-mobile-sv
 const endpoint = {
 	currentId: '/User/currentId',
 };
+
 export default function () {
 	const token = getApiToken();
 	const params = {
