@@ -1,27 +1,31 @@
 {
-	"name": "cascade-mobile-performance",
+	"name": "k6-performance-ts",
 	"version": "1.0.0",
 	"description": "performance testing with k6",
-	"main": "script.js",
-	"scripts": {
-		"test": "k6 run tests/performance.test.js",
-		"perfo": "webpack && k6 run dist/test.bundle.js"
-	},
+	"author": "upex",
+	"license": "MIT",
 	"keywords": [
-		"k6"
+		"k6",
+		"upex",
+		"performance",
+		"testing"
 	],
-	"author": "dnv",
-	"license": "ISC",
-	"devDependencies": {
-		"@babel/core": "7.23.0",
-		"@babel/preset-env": "7.22.20",
-		"@types/k6": "0.46.3",
-		"babel-loader": "9.1.3",
-		"core-js": "3.33.0",
-		"webpack": "5.88.2",
-		"webpack-cli": "5.1.4"
+	"scripts": {
+		"start": "webpack",
+		"test": "yarn pack && k6 run dist/check.test.ts"
 	},
-	"dependencies": {
-		"node-fetch": "^3.3.2"
+	"devDependencies": {
+		"@babel/core": "7.13.16",
+		"@babel/preset-env": "7.13.15",
+		"@types/k6": "0.45.3",
+		"@types/webpack": "5.28.0",
+		"babel-loader": "8.2.2",
+		"clean-webpack-plugin": "4.0.0-alpha.0",
+		"copy-webpack-plugin": "9.0.1",
+		"core-js": "3.34.0",
+		"typescript": "4.2.4",
+		"webpack": "5.35.1",
+		"webpack-cli": "4.6.0",
+		"webpack-glob-entries": "1.0.1"
 	}
 }

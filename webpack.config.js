@@ -3,18 +3,25 @@ const path = require('path');
 module.exports = {
 	mode: 'production',
 	entry: {
-		test: './tests/performanceBundle.test.js',
-		urls: './helper/endpoints.js',
-		envs: './helper/environment.js',
-	},
+		login: './tests/check.test.ts',
+	}, // Generates multiple entry for each test
 	output: {
-		path: path.resolve(__dirname, 'dist'), // eslint-disable-line
+		path: path.join(__dirname, 'dist'),
 		libraryTarget: 'commonjs',
-		filename: '[name].bundle.js',
+		filename: '[name].test.js',
+	},
+	resolve: {
+		extensions: ['.ts', '.js'],
 	},
 	module: {
-		rules: [{ test: /\.js$/, use: 'babel-loader' }],
+		rules: [
+			{
+				test: /\.ts$/,
+				use: 'babel-loader',
+				exclude: /node_modules/,
+			},
+		],
 	},
 	target: 'web',
-	externals: /k6(\/.*)?/,
+	externals: /^(k6|https?\:\/\/)(\/.*)?/,
 };

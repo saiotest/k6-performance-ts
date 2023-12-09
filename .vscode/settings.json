@@ -4,20 +4,12 @@
 	"workbench.iconTheme": "vscode-icons",
 	"cSpell.language": "en,es",
 	"terminal.integrated.defaultProfile.windows": "Git Bash",
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[Typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
 	"editor.quickSuggestions": {
 		"comments": false,
 		"strings": true,
 		"other": true
 	},
+	"editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
 	"editor.formatOnType": true,
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
@@ -25,5 +17,8 @@
 	"editor.tabCompletion": "on",
 	"editor.lineHeight": 20,
 	"editor.cursorBlinking": "expand",
+	"editor.formatOnSaveMode": "file", // required to format on save
+	"files.autoSave": "onFocusChange", // optional but recommended
+	"vs-code-prettier-eslint.prettierLast": true, // set as "true" to run 'prettier' last not first
 	"git.enableSmartCommit": true
 }
