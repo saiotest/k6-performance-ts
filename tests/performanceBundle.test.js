@@ -1,7 +1,7 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
-import { getApiToken } from '../helper/environment';
-import { USER, SERVER } from '../helper/endpoints';
+import { getApiToken } from './environment.js';
+import { USER, SERVER } from './endpoints.js';
 
 //* Preconditions
 export function setup() {
