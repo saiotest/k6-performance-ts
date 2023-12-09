@@ -3,7 +3,7 @@ import { AccessTokenResponse } from './typeAuth';
 
 //* Required Variables processed from .env file:
 const baseUrl = __ENV.TOKEN_URL;
-const tokenEndpoint = __ENV.GET_TOKEN_URL;
+const tokenEndpoint = '/B2C_1_ropc/oauth2/v2.0/token';
 const username = __ENV.USERNAME;
 const password = __ENV.PASSWORD;
 const scope = __ENV.SCOPE;
@@ -16,9 +16,11 @@ export type auth = {
 
 //* Use this function to get the token for the API calls
 export function getApiToken() {
+	console.log('---- Auth Login...');
+	console.log('---- Request URL:', requestURL);
 	const loginResponse = http.post(requestURL, { 'Content-Type': 'x-www-form-urlencoded' });
-	const responseObj = loginResponse.json() as AccessTokenResponse;
-	const token = responseObj.access_token;
+	const responseJson = loginResponse.json() as AccessTokenResponse;
+	const token = responseJson.access_token;
 	const Auth: auth = {
 		'Content-Type': 'application/json',
 		Authorization: `Bearer ${token}`,
