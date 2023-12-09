@@ -46,15 +46,15 @@ nvm use
 Para ejecutar una prueba escrita en TypeScript, primero tenemos que transpilar el código TypeScript a JavaScript y empaquetar el proyecto
 
 ```bash
-yarn pack
+yarn build
 ```
 
-Este comando crea los archivos finales de prueba en la carpeta `./dist`.
+Este comando crea los archivos finales de prueba en la carpeta `./webpack`.
 
 Una vez hecho esto, podemos ejecutar nuestro script de la misma manera que usualmente lo hacemos, por ejemplo:
 
 ```bash
-k6 run dist/performance.test.js
+k6 run webpack/performance.test.js
 ```
 
 ## Escribiendo tus propias pruebas
@@ -62,7 +62,7 @@ k6 run dist/performance.test.js
 Reglas para escribir pruebas:
 - El código de prueba se encuentra en la carpeta `tests`
 - Los puntos de entrada para las pruebas deben tener la extensión "_test.ts_" en el nombre para distinguirlos de los archivos auxiliares. Puedes cambiar la entrada [aquí](./webpack.config.js#L8). 
-- Si se requieren archivos estáticos, agrégalos a la carpeta `./assets`. Su contenido se copia a la carpeta de destino (`dist`) junto con los scripts compilados.
+- Si se requieren archivos estáticos, agrégalos a la carpeta `./assets`. Su contenido se copia a la carpeta de destino (`webpack`) junto con los scripts compilados.
 
 ### Transpilación y Empaquetamiento
 
