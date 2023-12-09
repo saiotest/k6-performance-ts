@@ -1,6 +1,6 @@
 <div align="center">
 
-![.github/workflows/push.yml](https://github.com/k6io/template-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=master)
+[![Test in QA🧪](https://github.com/upex-galaxy/k6-performance-ts/actions/workflows/test.yml/badge.svg)](https://github.com/upex-galaxy/k6-performance-ts/actions/workflows/test.yml)
 
 # Plantilla para usar TypeScript con k6
 </div>
