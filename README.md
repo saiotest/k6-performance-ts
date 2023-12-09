@@ -33,6 +33,14 @@ cd k6-performance-ts
 yarn
 ```
 
+## Asegúrate de estar usando Node v16
+Para asegurarte de que estés usando la versión de Node que necesita el repo, ejecuta simplemente:
+```bash
+nvm use
+```
+*(si no tienes instalado nvm, Qué esperas!? instalado y vuelve a intentar, si no tienes la versión de Node del repo debes instalarlo con nvm install)*
+
+
 ## Ejecutando la prueba
 
 Para ejecutar una prueba escrita en TypeScript, primero tenemos que transpilar el código TypeScript a JavaScript y empaquetar el proyecto

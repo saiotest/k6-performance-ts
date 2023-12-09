@@ -1,8 +1,8 @@
 import http from 'k6/http';
 import { sleep, check } from 'k6';
 import { Options } from 'k6/options';
-import { getApiToken, type authHeader } from '../exports/auth';
-import { User, QA_SERVER } from '../exports/endpoints';
+import { getApiToken, type auth } from '../tools/auth';
+import { User, QA_SERVER } from '../tools/endpoints';
 
 //* Preconditions
 export function setup() {
@@ -19,7 +19,7 @@ export const options: Options = {
 };
 
 //* Performance Test:
-export default function (data: authHeader) {
+export default function (data: auth) {
 	const endpointCall = QA_SERVER + User.currentId;
 	const res = http.get(endpointCall, { headers: data });
 

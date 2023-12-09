@@ -1,6 +1,7 @@
 {
 	"name": "k6-performance-ts",
 	"version": "1.0.0",
+	"main": "index.js",
 	"description": "performance testing with k6",
 	"author": "upex",
 	"license": "MIT",
@@ -11,18 +12,22 @@
 		"testing"
 	],
 	"scripts": {
-		"start": "webpack",
-		"test": "yarn pack && k6 run dist/check.test.ts"
+		"build": "webpack",
+		"test": "k6 run webpack/check.test.js",
+		"perfo": "k6 run webpack/performance.test.js"
 	},
 	"devDependencies": {
 		"@babel/core": "7.13.16",
+		"@babel/plugin-proposal-class-properties": "7.13.0",
+		"@babel/plugin-proposal-object-rest-spread": "7.13.8",
 		"@babel/preset-env": "7.13.15",
-		"@types/k6": "0.45.3",
+		"@babel/preset-typescript": "7.13.0",
+		"@types/k6": "~0.45.0",
 		"@types/webpack": "5.28.0",
 		"babel-loader": "8.2.2",
 		"clean-webpack-plugin": "4.0.0-alpha.0",
 		"copy-webpack-plugin": "9.0.1",
-		"core-js": "3.34.0",
+		"dotenv": "16.3.1",
 		"typescript": "4.2.4",
 		"webpack": "5.35.1",
 		"webpack-cli": "4.6.0",

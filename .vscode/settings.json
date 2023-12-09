@@ -1,6 +1,6 @@
 {
 	"workbench.settings.editor": "json",
-	"workbench.colorTheme": "Andromeda Colorizer",
+	"workbench.colorTheme": "GitHub Dark Dimmed",
 	"workbench.iconTheme": "vscode-icons",
 	"cSpell.language": "en,es",
 	"terminal.integrated.defaultProfile.windows": "Git Bash",
