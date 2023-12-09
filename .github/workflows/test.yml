@@ -16,8 +16,17 @@ jobs:
       - uses: actions/setup-node@v3
         with:
             node-version: 16
-      - run: npm ci
-      - run: npm build
+
+      - name: Yarn setup
+        uses: DerYeger/yarn-setup-action@master
+        with:
+            node-version: 16
+    
+      - name: Install dependencies and Build
+        run: |
+            yarn
+            yarn build
+
       - name: Run local k6 test
         uses: grafana/k6-action@v0.2.0
         with:
